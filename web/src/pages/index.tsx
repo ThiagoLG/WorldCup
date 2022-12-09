@@ -1,3 +1,5 @@
+import React from "react";
+
 interface HomeProps {
   count: number
 }
@@ -5,7 +7,7 @@ interface HomeProps {
 export default function Home(props: HomeProps) {
 
   return (
-    <h1>Hello World - {props.count}</h1>
+    <h1 className="">Contagem - {props.count}</h1>
   )
 }
 
@@ -16,7 +18,7 @@ export const getServerSideProps = async () => {
 
   return {
     props: {
-      count: data.count
+      count: data.pools
     }
   }
 
