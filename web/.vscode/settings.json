@@ -2,7 +2,8 @@
   "tailwindCSS.includeLanguages": {
     "javascript": "javascript",
     "html": "HTML",
-    "plaintext": "javascript" 
+    "plaintext": "javascript",
+    "css": "css"
   },
   "editor.quickSuggestions": {
     "strings": true
