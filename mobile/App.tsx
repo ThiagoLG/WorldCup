@@ -7,6 +7,8 @@ import { Loading } from './src/components/loading'
 import { SignIn } from './src/screens/SignIn'
 import { THEME } from './src/styles/theme'
 import { AuthContextProvider } from "./src/contexts/AuthContext";
+import { New } from "./src/screens/New";
+import { Pools } from "./src/screens/Pools";
 
 /**
  * Componente principal do projeto, referente a página inicial
@@ -28,7 +30,7 @@ export default function App() {
           translucent
         />
 
-        {fontsLoaded ? <SignIn /> : <Loading />}
+        {fontsLoaded ? <Pools /> : <Loading />}
 
       </AuthContextProvider >
     </NativeBaseProvider>

@@ -1,38 +1,34 @@
-import { Button as ButtonNativeBase, Text, IButtonProps, Icon } from 'native-base'
-import { propsFlattener } from 'native-base/lib/typescript/hooks/useThemeProps/propsFlattener';
-
+import { Button as ButtonNativeBase, IButtonProps, Text } from 'native-base';
 
 interface Props extends IButtonProps {
   title: string;
   type?: 'PRIMARY' | 'SECONDARY';
 }
 
-export function Button({ title, type, ...rest }: Props) {
+export function Button({ title, type = 'PRIMARY', ...rest }: Props) {
   return (
     <ButtonNativeBase
-      w='full'
+      w="full"
       h={14}
-      rounded='sm'
-      fontSize='md'
-      textTransform='uppercase'
-      bg={type === 'SECONDARY' ? 'red.500' : 'yellow.500'}
+      rounded="sm"
+      fontSize="md"
+      textTransform="uppercase"
+      bg={type === 'SECONDARY' ? 'red.500' : "yellow.500"}
       _pressed={{
-        bg: type === 'SECONDARY' ? 'red.600' : 'yellow.600'
+        bg: type === 'SECONDARY' ? "red.400" : "yellow.600"
       }}
       _loading={{
-        _spinner: { color: 'black' }
+        _spinner: { color: "black" }
       }}
-
-      {...rest}>
-
+      {...rest}
+    >
       <Text
-        fontSize='sm'
-        fontFamily='heading'
-        color={type === 'SECONDARY' ? 'white' : 'black'}
+        fontSize="sm"
+        fontFamily="heading"
+        color={type === 'SECONDARY' ? 'white' : "black"}
       >
         {title}
       </Text>
-
-    </ButtonNativeBase>
-  )
+    </ButtonNativeBase >
+  );
 }
